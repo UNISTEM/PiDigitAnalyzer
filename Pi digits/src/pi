@@ -1,0 +1,172 @@
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+public class Pie {
+    public static void main(String[] args) throws FileNotFoundException {
+        File file = new File("C:\\Users\\ivanv\\Downloads\\pi100.txt");
+        Scanner in = new Scanner(file);
+
+        //Digit counters
+        int count0 = 0;
+        int count1 = 0;
+        int count2 = 0;
+        int count3 = 0;
+        int count4 = 0;
+        int count5 = 0;
+        int count6 = 0;
+        int count7 = 0;
+        int count8 = 0;
+        int count9 = 0;
+        //star counters
+        int stars0 = 0;
+        int stars1 = 0;
+        int stars2 = 0;
+        int stars3 = 0;
+        int stars4 = 0;
+        int stars5 = 0;
+        int stars6 = 0;
+        int stars7 = 0;
+        int stars8 = 0;
+        int stars9 = 0;
+
+        //Count Number of Occurrences of Each Digit
+        String number = in.nextDouble() + "";
+        while (in.hasNextLong()) {
+            for (int i = 0; i < number.length(); i++) {
+                if (number.charAt(i) == '0') {
+                    count0++;
+                }
+                if (number.charAt(i) == '1') {
+                    count1++;
+                }
+                if (number.charAt(i) == '2') {
+                    count2++;
+                }
+                if (number.charAt(i) == '3') {
+                    count3++;
+                }
+                if (number.charAt(i) == '4') {
+                    count4++;
+                }
+                if (number.charAt(i) == '5') {
+                    count5++;
+                }
+                if (number.charAt(i) == '6') {
+                    count6++;
+                }
+                if (number.charAt(i) == '7') {
+                    count7++;
+                }
+                if (number.charAt(i) == '8') {
+                    count8++;
+                }
+                if (number.charAt(i) == '9') {
+                    count9++;
+                }
+            }
+            number = in.nextLong() + "";
+        }         //end of number checking
+
+        while (count0 >= 15){         //Determining the Number of Stars that will be Printed
+            count0 = count0-15;
+            stars0++;
+        }
+        while (count1 >= 15){
+            count1 = count1-15;
+            stars1++;
+        }
+        while (count2 >= 15){
+            count2 = count2-15;
+            stars2++;
+        }
+        while (count3 >= 15){
+            count3 = count3 - 15;
+            stars3++;
+        }
+        while (count4 >= 15){
+            count4 = count4-15;
+            stars4++;
+        }
+        while (count5 >= 15){
+            count5 = count5-15;
+            stars5++;
+        }
+        while (count6 >= 15){
+            count6 = count6-15;
+            stars6++;
+        }
+        while (count7 >= 15){
+            count7 = count7-15;
+            stars7++;
+        }
+        while (count8 >= 15){
+            count8 = count8-15;
+            stars8++;
+        }
+        while (count9 >= 15){
+            count9 = count9-15;
+            stars9++;
+        }
+        //End of determining number of stars
+        //Start of Printing
+        System.out.print("0: ");
+        for (int j = 0; j < stars0; j++){
+            System.out.print("*");
+        }
+        System.out.println();
+
+        System.out.print("1: ");
+        for (int j = 0; j < stars1; j++){
+            System.out.print("*");
+        }
+        System.out.println();
+
+        System.out.print("2: ");
+        for (int j = 0; j < stars2; j++){
+            System.out.print("*");
+        }
+        System.out.println();
+
+        System.out.print("3: ");
+        for (int j = 0; j < stars3; j++){
+            System.out.print("*");
+        }
+        System.out.println();
+
+        System.out.print("4: ");
+        for (int j = 0; j < stars4; j++){
+            System.out.print("*");
+        }
+        System.out.println();
+
+        System.out.print("5: ");
+        for (int j = 0; j < stars5; j++){
+            System.out.print("*");
+        }
+        System.out.println();
+
+        System.out.print("6: ");
+        for (int j = 0; j < stars6; j++){
+            System.out.print("*");
+        }
+        System.out.println();
+
+        System.out.print("7: ");
+        for (int j = 0; j < stars7; j++){
+            System.out.print("*");
+        }
+        System.out.println();
+
+        System.out.print("8: ");
+        for (int j = 0; j < stars8; j++){
+            System.out.print("*");
+        }
+        System.out.println();
+
+        System.out.print("9: ");
+        for (int j = 0; j < stars9; j++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+}
